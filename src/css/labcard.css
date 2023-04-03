@@ -1,0 +1,131 @@
+.labcard-container {
+
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.panel {
+  flex: 0.5;
+  color: #fff;
+  height: 55vh;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: flex 0.2s ease-in;
+}
+
+.panel-button {
+
+  background: none;
+  color: #fff;
+  border: none;
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.panel:before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(19, 48, 127);
+  background: -moz-linear-gradient(0deg, rgba(19, 48, 127, 1) 0%, rgba(19, 48, 127, 0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(19, 48, 127, 1) 0%, rgba(19, 48, 127, 0) 100%);
+  background: linear-gradient(0deg, rgba(19, 48, 127, 1) 0%, rgba(19, 48, 127, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13307f", endColorstr="#13307f", GradientType=1);
+  mix-blend-mode: multiply;
+
+}
+
+.panel h3 {
+  font-size: medium;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: translate(-50%, -50%) scale(-1);
+  transition: opacity 0.2s ease-in;
+}
+
+.panel .informacion {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 50%;
+  text-align: center;
+
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease-in;
+}
+
+.panel .informacion span {
+  font-weight: 800;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.panel .informacion p {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.panel.active {
+  flex: 2;
+}
+
+.panel.active h3 {
+  opacity: 0;
+
+}
+
+.panel.active .informacion {
+  opacity: 1;
+}
+
+.normal-shadow {
+  -webkit-box-shadow: 0px 5px 20px 1px rgb(0 0 0 / 10%);
+  box-shadow: 0px 5px 20px 1px rgb(0 0 0 / 10%);
+}
+
+/* Background images separated from HTML, you can add these to HTML as style property if you like */
+.achievements {
+  background-image: url('https://images.pexels.com/photos/6120398/pexels-photo-6120398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.projects {
+  background-image: url('https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.gallery {
+  background-image: url('https://images.pexels.com/photos/297494/pexels-photo-297494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.consultancy-services {
+  background-image: url('https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.faculty {
+  background-image: url('https://images.pexels.com/photos/6325941/pexels-photo-6325941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+
+@media screen and (max-width: 600px){
+    .panel{
+      height: 30vh;
+    }
+}

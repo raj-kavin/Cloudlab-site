@@ -1,0 +1,102 @@
+
+.header{
+    display: flex;
+    padding:10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    justify-content: space-between;
+    z-index: 1000;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    color: #0000;
+    transition: all 0.2s ease-in;
+}
+
+
+
+.header.colorchange{
+    background-color: rgb(0,136,255);
+    color: white;
+    
+}
+
+.header.colorchange span{
+    color: white;
+}
+
+.header.colorchange .clg-name{
+    color: white;
+}
+.header.colorchange a{
+    color: white;
+    text-decoration: none;
+}
+.headerLogo{
+    width: 50%;
+    padding-left: 0px;
+    cursor: pointer;
+
+
+}
+.leftHeader{
+    display: flex;
+    gap:80px;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.clg-name{
+    position: relative;
+    left: -10%;
+    color: black;
+}
+
+.rightHeader{
+    display:flex;   
+    
+    top:3.6%;
+    position: relative;
+    left: -10%;
+
+}
+
+.navItem{
+    padding-left:30px ;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.navItem a{
+    text-decoration: none;
+    color: black;
+}
+
+.header .rightHeader .navItem a:hover{
+    filter: drop-shadow(0 0.2rem 0.55rem rgb(0,136,255));
+}
+
+.header.colorchange .rightHeader .navItem a:hover{
+    filter: drop-shadow(0 0.2rem 0.55rem white);
+}
+
+@media screen and (max-width:1000px) {
+    .rightHeader{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .clg-name span{
+        display: none;
+    }
+    .clg-name:after{
+        content: 'BIT';
+    }
+}

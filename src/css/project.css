@@ -1,0 +1,132 @@
+.main-project{
+    height: 60%;
+    width: 100%;
+
+}
+
+.project-header{
+
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 6%;
+    padding-top:6%;
+
+}
+
+.project-cardcontainer{
+
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family:"Inter";
+    background-color: white;
+    position: relative;
+    
+}
+
+
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    padding: 30px 50px;
+    background: #0000;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 4%;
+  }
+  
+  .project-card:hover {
+    height: 320px;
+  }
+  
+  .project-imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50px);
+    z-index: 999;
+    
+  }
+  
+  .project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .project-content {
+    /* padding: 10px 0px; */
+    transform: translateY(-450px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: 14%;
+   
+  }
+
+  .project-content h2{
+    font-size: 17px;
+    color: rgb(0,136,255);
+  }
+  
+  .project-card:hover > .project-content {
+    opacity: 1;
+    transform: translateY(-180px);
+    color: black;
+  }
+
+  .project-card:hover > .project-heading-before{
+    opacity: 0;
+  }
+
+  .project-heading-before{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: 80%;
+    left: 10%;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(0,136,255);
+  }
+
+
+@media screen and (max-width:1300px){
+
+  .main-project{
+    height: auto;
+  }
+  .project-cardcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .project-card{
+    margin-bottom: 10%;
+    margin-left: 3%;
+  }
+
+}
+
+@media screen and (max-width:700px){
+  .card{
+    margin-bottom: 15%;
+  }
+}
+
+@media screen and (max-width:500px){
+    .card{
+      margin-bottom: 20%;
+    }
+}

@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+  }
+ 
+  .faculty_container {
+    padding: 15px;
+    margin-left: -9%;
+  }
+  .clearfloat {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .faculty_card {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .faculty_card li {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    margin-left: 10%;
+    /* padding-right: 50px; */
+  }
+
+  .faculty_card li:after,
+  .faculty_card li:before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .faculty_card li img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    float: left;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+  }
+  .faculty_card li .faculty_details {
+    float: left;
+    text-align: left;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0);
+    min-width: 250px;
+  }
+  .faculty_card li .faculty_details > span,
+  .faculty_card li .faculty_details > a {
+    display: block;
+    padding: 0 15px 0 35px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    position: relative;
+  }
+  .faculty_card li .faculty_details > span:before,
+  .faculty_card li .faculty_details > a:before {
+    display: inline-block;
+    font: normal normal normal 13px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 15px;
+    width: 15px;
+    text-align: center;
+    color: #444;
+  }
+  .faculty_card li .faculty_details a {
+    color: rgb(0,136,255);
+    transition: color 0.5s ease-in-out;
+  }
+  .faculty_card li .faculty_details a:hover,
+  .faculty_card li .faculty_details a:focus {
+    color: rgb(0,136,255);
+    transition: color 0.5s ease-in-out;
+  }
+  .faculty_card li .faculty_details .faculty_name {
+    font-weight: 600;
+  }
+  .faculty_card li .faculty_details .faculty_name:before {
+    content: "\f2c0";
+  }
+  .faculty_card li .faculty_details .faculty_title:before {
+    content: "\f2c1";
+  }
+  .faculty_card li .faculty_details .faculty_phone:before {
+    content: "\f095";
+  }
+  .faculty_card li .faculty_details .faculty_email:before {
+    content: "\f003";
+  }
+  .faculty_card li:hover {
+    background: rgba(198, 199, 205, 0.5);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+  }
+  .faculty_card li:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease-in-out;
+  }
+  .faculty_card li:hover .faculty_details {
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px rgb(0,136,255);
+  }
+  @media (max-width: 550px) {
+    .faculty_card li {
+      display: block;
+      width: auto;
+      max-width: 200px;
+      margin: 30px auto;
+    }
+        .faculty_card li img,
+        .faculty_card li .faculty_details {
+        float: none;
+        }
+        .faculty_card li img {
+        margin: 0 auto;
+        }
+        .faculty_card li .faculty_details {
+        margin-top: 20px;
+        text-align: center;  
+        min-width: 0;
+        }
+        .faculty_card li .faculty_details span,
+        .faculty_card li .faculty_details a {
+        padding: 0;
+        white-space: break-all;
+        word-wrap: break-word;
+        }
+        .faculty_card li .faculty_details span:before,
+        .faculty_card li .faculty_details a:before {
+        display: none;
+        }
+    }
